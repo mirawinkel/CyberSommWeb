@@ -31,4 +31,8 @@ The JavaScript logic for the sommelier function of the site is still currently a
 ### Additional
 The site is constructed to run inside a SpringBoot application. The contact.html page utilizes some "thymeleaf" functionality to assist with the handling of the GET and POST requests to send the information as an email through the Java backend.
 
-Currently hosted at [ReflectionWebDesign.com](https://reflectionwebdesign.com/CyberSommWeb/index.html)
+Currently hosted at:
+
+[ReflectionWebDesign.com/CyberSommWeb](https://reflectionwebdesign.com/CyberSommWeb/index.html)
+
+[GitHub Repository](https://github.com/mirawinkel/CyberSommWeb)
