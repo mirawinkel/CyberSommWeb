@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>CyberSomm</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5d6e319862.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/fav-icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/fav-icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/fav-icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/fav-icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/fav-icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/fav-icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/fav-icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/fav-icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/fav-icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./images/fav-icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/fav-icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/fav-icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/fav-icon/favicon-16x16.png">
+    <link rel="manifest" href="./images/fav-icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./images/fav-icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light mb-5">
+      <a class="navbar-brand ml-4" id="brandtext" href="./index.html"><img src="./images/Grapes.png" class="navLogo"  alt="Grape Logo">CyberSomm</a>
+      <button class="navbar-toggler mt-1 mb-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav" id="fade">
+              <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Welcome </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./login.html">Login</a>
+              </li>
+              <li class="nav-item"><a class="nav-link  flex-nowrap" href="./sommelier.html">Sommelier</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./store.html">Store</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./about.html">About</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  <div class="flexContainer mb-2 text-center">
+    <h1>Contact the CyberSomm Team</h1>
+  </div>
+  <div class="flexContainer">
+    <form action="#" th:action="@{/contact}" th:object="${contact}" method="post" id="form">
+        <table style="width:100%;max-width:550px;border:0;" cellpadding="8" cellspacing="0">
+            <tr>
+                <td>
+                    <label for="Name">Name:</label>
+                </td>
+                <td>
+                    <input name="Name" type="text" th:field="*{name}" maxlength="60" style="width:100%;max-width:250px;" id="name" placeholder="Your name" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Email">Email:</label>
+                </td>
+                <td>
+                    <input name="Email" type="email" th:field="*{sender}" maxlength="60" style="width:100%;max-width:250px;" id="email" placeholder="sender@email.com" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Subject">Subject:</label>
+                </td>
+                <td>
+                    <input name="Subject" type="text" th:field="*{subject}" maxlength="60" style="width:100%;max-width:250px;" id="subject" placeholder="Subject..." required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Message">Message:</label>
+                </td>
+                <td>
+                  <textarea name="Message" th:field="*{message}" rows="7" cols="40" style="width:100%;max-width:22rem;" id="message" placeholder="Your message..." required>
+                  </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>  
+                </td>
+                <td>
+                    <input type="submit" value="Submit" class="ml-2 mr-5 button" id="submitButton"/>
+                    <input type="reset" value="Reset" class="button" id="resetButton"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+  </div>
+<script type="text/javascript" src="./js/contact.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="" async defer></script>
+
+</body>
+</html>
