@@ -13,6 +13,6 @@ function white() {
     pair.drawButton('Oakey or Buttery', white, 'Bright and Refreshing', red, 'Floral or Sweet', sparkling)
 }
 function sparkling() {
-    question.innerHTML = 'Will you just drink the bubbles now?';
+    question.innerHTML = 'Work in progress';
     pair.drawButton('Yes', white, 'Bubbles are Life', red, 'Is there More?', sparkling)
 }

@@ -1,5 +1,3 @@
-
-
 .user-icon {
     display: absolute;
     margin-left: auto;
@@ -25,7 +23,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border: .06rem solid rgb(100, 39, 62);
+    border: .07rem solid rgb(100, 39, 62);
     background-color: white;
     box-shadow: 0.4rem .4rem .2rem rgba(65, 25, 40, 0.5);
     -webkit-border-radius: 1rem;
@@ -44,27 +42,39 @@ span {
     color: dimgray;
 }
 
-#email {
-    margin-top: 1.3rem;
-}
 
 input {
     width: 15rem;
     height: 2.4rem;
-    border-radius: .33rem;
+    border-radius: .3rem;
     text-align: center;
     background-color: rgba(243, 243, 243, 0.692);
-    border: .05rem solid black;
-    margin-top: 1.8rem;
     font-size: .8rem;
     padding-bottom: .25rem;
-    -webkit-border-radius: .33rem;
-    -moz-border-radius: .33rem;
-    -ms-border-radius: .33rem;
-    -o-border-radius: .33rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
 }
 
-input[type="text"]:focus, input[type="password"]:focus{
+.login {
+    margin-top: 1.8rem;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
     outline: none;
     box-shadow: .2rem .1rem .3rem rgb(100, 39, 62);
+}
+
+input:invalid, textarea:invalid {
+    border: .12rem dashed rgb(190, 0, 0);
+}
+
+input:invalid:required, textarea:invalid:required{
+background-image: linear-gradient(to right, rgba(255, 255, 255, 0.575), rgb(255, 240, 192));
+}
+
+input:valid, textarea:valid{
+border: .1rem solid rgb(100, 39, 62);
+
 }

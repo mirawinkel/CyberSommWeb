@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/5d6e319862.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/input.css">
     <link rel="apple-touch-icon" sizes="57x57" href="./images/fav-icon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./images/fav-icon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="./images/fav-icon/apple-icon-72x72.png">
@@ -98,8 +99,7 @@
                     <label for="Message">Message:</label>
                 </td>
                 <td>
-                  <textarea name="Message" th:field="*{message}" rows="7" cols="40" style="width:100%;max-width:22rem;" id="message" placeholder="Your message..." required>
-                  </textarea>
+                  <textarea  required  name="Message" th:field="*{message}" rows="7" cols="40" style="width:100%;max-width:22rem;" id="message" placeholder="Message..."></textarea >
                 </td>
             </tr>
             <tr>

@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/5d6e319862.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/style.css">
-        <!-- <link rel="stylesheet" href="./css/login.css"> -->
+        <link rel="stylesheet" href="./css/input.css">
         <link rel="apple-touch-icon" sizes="57x57" href="./images/fav-icon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="./images/fav-icon/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="./images/fav-icon/apple-icon-72x72.png">
@@ -32,73 +32,8 @@
         <meta name="msapplication-TileImage" content="./images/fav-icon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
         <style>
-          .user-icon {
-              display: absolute;
-              margin-left: auto;
-              margin-right: auto;
-              margin-top: -5rem;
-              margin-bottom: 1.3rem;
-              width: 6rem;
-              height: 6rem;
-              border-radius: 6rem;
-              text-align: center;
-              color: white;
-              background-color: rgba(116, 48, 54, 1);
-              text-shadow: .13rem .13rem rgba(116, 48, 54, 0.7);
-              box-shadow: .3rem .3rem rgba(128, 128, 128, .5);
-          }
-
-          .container {
-              margin-top: 4.5rem;
-              width: 20rem;
-              height: 26rem;
-              border-radius: 1rem;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              text-align: center;
-              border: .06rem solid rgb(100, 39, 62);
-              background-color: white;
-              box-shadow: 0.4rem .4rem .2rem rgba(65, 25, 40, 0.5);
-              -webkit-border-radius: 1rem;
-              -moz-border-radius: 1rem;
-              -ms-border-radius: 1rem;
-              -o-border-radius: 1rem;
-          }
-
-          i {
-              font-size: 2.5rem;
-              margin-top: 1.5rem;
-          }
-
-          span {
-              font-size:1.2rem;
-              color: dimgray;
-          }
-
           #email {
-              margin-top: 1.3rem;
-          }
-
-          input {
-              width: 15rem;
-              height: 2.4rem;
-              border-radius: .33rem;
-              text-align: center;
-              background-color: rgba(243, 243, 243, 0.692);
-              border: .05rem solid black;
-              margin-top: 1.8rem;
-              font-size: .8rem;
-              padding-bottom: .25rem;
-              -webkit-border-radius: .33rem;
-              -moz-border-radius: .33rem;
-              -ms-border-radius: .33rem;
-              -o-border-radius: .33rem;
-          }
-
-          input[type="text"]:focus, input[type="password"]:focus{
-              outline: none;
-              box-shadow: .2rem .1rem .3rem rgb(100, 39, 62);
+            margin-top: 1.3rem;
           }
         </style>
     </head>
@@ -149,10 +84,11 @@
         <div class="login-box">
           <span>User Login</span>
           <form>
-              <input type="text" placeholder="Email" id="email"><br/>
+              <input type="text" placeholder="Email" class="login"  id="email" required><br/>
 
-              <input type="password" placeholder="Password" id="password"><br/>
-              <button type="submit" value="Login" id="login" class="mt-4 mb-1 button">Login</button>
+              <input type="password" placeholder="Password" class="login" id="password" required><br/>
+
+              <button type="submit" value="Login" id="login" class="mt-4 mb-1 button login">Login</button>
           </form>
           <div class="flexContainer" >
             <a href="#" class="mb-3 mt-4">Forgot your password</a>
